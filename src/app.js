@@ -17,7 +17,7 @@ const app = express();
 const server = http.createServer(app);
 const io = socketIO(server);
 
-const port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 app.use(express.static("./public"));
 
 io.on("connection", (socket) => {
@@ -80,6 +80,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.port || 3000, () => {
+server.listen(process.env.PORT || 3000, () => {
   console.log(`Server is up on port ${port}`);
 });
