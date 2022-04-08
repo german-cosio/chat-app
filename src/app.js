@@ -80,6 +80,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(port, () => {
+server.listen(process.env.port || 3000, () => {
   console.log(`Server is up on port ${port}`);
 });
